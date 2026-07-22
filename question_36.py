@@ -1,0 +1,1 @@
+# Write a Python Program to check if given array is Monotonic.
