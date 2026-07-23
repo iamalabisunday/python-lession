@@ -12,6 +12,8 @@ def sort_word(word_list):
                 
     return word_list
 
+
+
 while True:
     try:
         statment = input("Enter a statment: ").split()
