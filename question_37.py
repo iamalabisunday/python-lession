@@ -44,7 +44,7 @@ while True:
         print_matrix(result)
         
     except ValueError:
-        print("Error")
+        print("Error: kindly check your code")
         
     again = input("Do you want to try again - y/n: ").lower().strip()
     if again != "y":
