@@ -1,16 +1,7 @@
 # Write a Python Program to Sort Words in Alphabetic Order.
 def sort_word(word_list):
-
-    n = len(word_list)
-
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            # Compare words in lowercase to ignore capital letters
-            if word_list[j].lower() > word_list[j + 1].lower():
-                # Swap the elements
-                word_list[j], word_list[j + 1] = word_list[j + 1], word_list[j]
-                
-    return word_list
+    result = word_list
+    return result
 
 while True:
     try:
