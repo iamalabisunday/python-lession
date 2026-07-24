@@ -1,11 +1,11 @@
 # Write a Python Program to Sort Words in Alphabetic Order.
 def sort_word(word_list):
-    result = word_list
+    result = word_list.split()
     return result
 
 while True:
     try:
-        statment = input("Enter a statment: ").split()
+        statment = input("Enter a statment: ")
         result = sort_word(statment)
 
         print("--------------------------------------")
