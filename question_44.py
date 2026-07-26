@@ -12,7 +12,7 @@ def disarim_number(num):
 
 while True:
     try:
-        print('Enter disarim number between')
+        print('Check disarim number between')
         number_start = int(input("from: "))
         number_end = int(input("end: "))
         
