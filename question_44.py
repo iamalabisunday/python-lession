@@ -8,8 +8,7 @@ def disarim_number(num):
             
     if total_sum == num:
        return total_sum
-   
-#  f"The Disarium numbers between {number_start} and {number_end} is {total_sum}:"
+
 
 while True:
     try:
