@@ -50,7 +50,6 @@ else:
     print("Invalid operator.")
     exit()
 
-
 while True:
     continue_calculation = input("Do you want to continue - (y/n): ").strip().lower()
 
@@ -58,36 +57,38 @@ while True:
         current_operator = operator()
         num_another = num("Enter another number: ")
 
-        previous_result = num_lists.pop()
+        previous_result = num_lists[-1]
 
         if current_operator == "+":
-            result = previous_result + num_another
+            second_result = previous_result + num_another
 
         elif current_operator == "-":
-            result = previous_result - num_another
+            second_result = previous_result - num_another
 
         elif current_operator == "*":
-            result = previous_result * num_another
+            second_result = previous_result * num_another
 
         elif current_operator == "/":
             if previous_result == 0 or num_another == 0:
                 print("Invaild: Divide by zero")
                 break
             elif previous_result > num_another:
-                result = previous_result / num_another
+                second_result = previous_result / num_another
+
             elif num_another > previous_result:
-                result = f"-{num_another / previous_result}"
+                second_result = f"-{num_another / previous_result}"
 
         else:
             print("Invalid operator.")
             num_lists.append(previous_result)
             continue
 
-        num_lists.append(result)
-        print(result)
+        num_lists.append(second_result)
+        print(second_result)
+        print(num_lists)
 
     elif continue_calculation == "n":
-        print(f"Final Answer: {num_lists.pop()}")
+        print(f"Final Answer: {num_lists[-1]}")
         print("Goodbye!")
         break
 
