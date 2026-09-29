@@ -24,6 +24,13 @@ if current_operator == "+":
     num_lists.append(result)
     print(result)
 
+elif current_operator == "-":
+    first_num = num("Enter a number: ")
+    
+    result = first_num - start_addition
+    num_lists.append(result)
+    print(result)
+
 elif current_operator == "*":
     first_num = num("Enter a number: ")
 
@@ -55,6 +62,9 @@ while True:
 
         if current_operator == "+":
             result = previous_result + num_another
+
+        elif current_operator == "-":
+            result = previous_result - num_another
 
         elif current_operator == "*":
             result = previous_result * num_another
