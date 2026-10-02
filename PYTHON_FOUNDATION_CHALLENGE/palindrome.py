@@ -4,13 +4,13 @@ def is_palindrome(s: str):
 
     while left < right:
 # ************  Move left pointer rightward if it points to a non-alphanumeric character ************ 
-        while left < right and not s[left].isalnum():
+        if not s[left].isalnum():
+        # if not (("a" <= s[left] <= "z") or ("A" <= s[left] <= "Z") or ("0" <= s[left] <= "9")):
+        # if s[left] in ",. !?":
             left += 1
-            result = s[left]
-            print("Result", result)
-
 # ************  Move right pointer leftward if it points to a non-alphanumeric character ************ 
-        while left < right and not s[right].isalnum():
+        if not s[right].isalnum():
+        # if s[right] in (",", ".", " ", "!", "?"):
             right -= 1
 
 # ************ Compare characters ignoring case ************
@@ -24,4 +24,4 @@ def is_palindrome(s: str):
 
 
 print(is_palindrome("Was it a car or a cat I saw?"))
-# print(is_palindrome("Hello, World!"))
+print(is_palindrome("Hello, World!"))
