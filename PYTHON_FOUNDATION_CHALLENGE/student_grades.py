@@ -44,5 +44,5 @@ for student in students:
 
 print("=" * 50)
 print("--- Overall Summary ---")
-print(f"Highest Performed Student: {highest_student} with an average of {highest_avg}")
-print(f"Lowest Performed Student: {lowest_student} with an average of {lowest_avg}")
+print(f"Highest Performed Student: {highest_student} - with an average of {highest_avg}")
+print(f"Lowest Performed Student: {lowest_student} - with an average of {lowest_avg}")
