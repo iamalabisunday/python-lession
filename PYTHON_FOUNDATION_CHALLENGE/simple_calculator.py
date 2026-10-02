@@ -30,10 +30,18 @@ while True:
         print("Result:", result)
 
 # ****** Calculator section ******
-    operator, number = user_input.split(" ")
+    raw_user_input = user_input.split(" ")
 
-    result = calculator(sum_result, operator, float(number))
-    sum_result = result
-    prev_result.append(result)
+    if len(raw_user_input) != 2:
+        print("Invaild: Kindly input vaild input e.g + 5")
+        continue
 
-    print(sum_result)
+    operator, number = raw_user_input
+
+    try:
+        result = calculator(sum_result, operator, float(number))
+        sum_result = result
+        prev_result.append(result)
+        print(sum_result)
+    except ValueError:
+        print("Error: Enter a vaild input e.g + 5")
