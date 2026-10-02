@@ -40,8 +40,13 @@ while True:
 
     try:
         result = calculator(sum_result, operator, float(number))
-        sum_result = result
-        prev_result.append(result)
-        print(sum_result)
+        
+        if isinstance(result, (int, float)):
+            sum_result = result
+            prev_result.append(result)
+            print(sum_result)
+        elif isinstance(result, str):
+            print(result)
+
     except ValueError:
         print("Error: Enter a vaild input e.g + 5")
